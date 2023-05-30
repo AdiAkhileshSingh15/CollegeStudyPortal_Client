@@ -16,7 +16,7 @@ const FacultyAttendance = () => {
     const [subjectCode, setSubjectCode] = useState("")
     const [checkedValue, setCheckedValue] = useState([])
     const [error, setError] = useState({})
-    const [flag, setFlag] = useState(true)
+    // const [flag, setFlag] = useState(true)
     const [isLoading, setIsLoading] = useState(false)
     const [isLoading2, setIsLoading2] = useState(false)
 

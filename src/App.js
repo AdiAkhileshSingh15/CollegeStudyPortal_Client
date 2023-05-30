@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import jwt_decode from 'jwt-decode'
 
@@ -66,7 +66,6 @@ import { setStudent } from './features/studentSlice';
 
 function App() {
   const dispatch = useDispatch()
-  const store = useSelector((store) => store)
 
   useEffect(() => {
     const admin = JSON.parse(localStorage.getItem('adminJwtToken'))
