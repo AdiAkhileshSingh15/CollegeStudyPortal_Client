@@ -69,6 +69,8 @@ const FacultyStudentLoginPage = () => {
         if (!response.ok) {
             dispatch(setErrors(json))
             setIsFacultyLoading(false)
+            setFacultyRegNum('')
+            setFacultyPassword('')
         }
         if (response.ok) {
             //save the user to local storage
@@ -101,6 +103,8 @@ const FacultyStudentLoginPage = () => {
         if (!response.ok) {
             dispatch(setErrorsHelper(json))
             setIsStudentLoading(false)
+            setStudentRegNum('')
+            setStudentPassword('')
         }
         if (response.ok) {
             //save the user to local storage
