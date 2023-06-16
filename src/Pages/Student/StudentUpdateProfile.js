@@ -57,6 +57,11 @@ const StudentUpdateProfile = () => {
         if (!response.ok) {
             dispatch(setErrors(json))
             setIsLoading(false)
+            setGender('')
+            setAadharCard('')
+            setAvatar('')
+            setContactNumber('')
+            setFatherContactNumber('')
         }
         if (response.ok) {
             setGender('')
