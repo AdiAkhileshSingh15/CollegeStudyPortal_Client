@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import FacultyHomeHelper from '../../Components/FacultyHomeHelper'
@@ -7,6 +7,11 @@ import Footer from '../../Components/Footer';
 const FacultyHome = () => {
     const navigate = useNavigate()
     const { faculty, isAuthenticated } = useSelector((store) => store.faculty)
+    useEffect(() => {
+        if (!isAuthenticated) {
+            navigate('/')
+        }
+    })
     return (
         <>
             {isAuthenticated ? <>
@@ -20,7 +25,7 @@ const FacultyHome = () => {
                             <div className="row">
                                 <div className="col-5">
                                     <div className="card" style={{ width: "18rem" }}>
-                                        <img className="card-img-top" src={faculty.faculty.avatar} alt="Card image cap" />
+                                        <img className="card-img-top" src={faculty.faculty.avatar} alt="Card cap" />
                                         <div className="card-body">
                                             <h5 className="card-title">{faculty.faculty.name}</h5>
                                             <h5 className="card-title">{faculty.faculty.registrationNumber}</h5>
