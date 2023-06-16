@@ -26,7 +26,7 @@ const Chat = () => {
     const [message, setMessage] = useState("")
     const [messageArray, setMessageArray] = useState([])
     const [olderMessages, setOlderMessages] = useState([])
-    const ENDPOINT = 'http://localhost:4000'
+    const ENDPOINT = 'https://collegeapi.onrender.com'
 
     useEffect(() => {
         let temp = room
