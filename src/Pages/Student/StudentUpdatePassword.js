@@ -16,6 +16,8 @@ const StudentUpdatePassword = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState({})
 
+    const url = "https://collegeapi.onrender.com"
+    
     useEffect(() => {
         if (store.errorHelper) {
             setError(store.errorHelper)
@@ -27,7 +29,7 @@ const StudentUpdatePassword = () => {
         e.preventDefault()
         setIsLoading(true)
         const pswdData = { registrationNumber: store.student.student.student.registrationNumber, oldPassword, newPassword, confirmNewPassword }
-        const response = await fetch('http://localhost:4000/api/student/updatePassword', {
+        const response = await fetch(`${url}/student/updatePassword`, {
             method: 'POST',
             body: JSON.stringify(pswdData),
             headers: {
