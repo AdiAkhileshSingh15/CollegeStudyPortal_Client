@@ -83,6 +83,10 @@ const ForgotPassword = () => {
             const json = await response.json()
             if (!response.ok) {
                 setErrors(json)
+                setEmail('')
+                setOtp('')
+                setNewPassword('')
+                setConfirmNewPassword('')
             }
             if (response.ok) {
                 setErrors({})
@@ -105,6 +109,10 @@ const ForgotPassword = () => {
             const json = await response.json()
             if (!response.ok) {
                 setErrors(json)
+                setEmail('')
+                setOtp('')
+                setNewPassword('')
+                setConfirmNewPassword('')
             }
             if (response.ok) {
                 setErrors({})
