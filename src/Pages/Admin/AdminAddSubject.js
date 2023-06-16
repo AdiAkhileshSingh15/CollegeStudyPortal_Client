@@ -50,6 +50,11 @@ const AdminAddSubject = () => {
         if (!response.ok) {
             setError(json)
             setIsLoading(false)
+            setSubjectName('')
+            setSubjectCode('')
+            setTotalLectures('')
+            setYear('')
+            setDepartment('')
         }
         if (response.ok) {
             setError({})
