@@ -20,6 +20,9 @@ const StudentUpdateProfile = () => {
     const [avatar, setAvatar] = useState('')
     const [isLoading, setIsLoading] = useState(false)
     const [modal, setModal] = useState(false)
+    
+    const url = "https://collegeapi.onrender.com"
+    
     const imagehandler = (e) => {
         if (e.target.files && e.target.files[0]) {
             let img = e.target.files[0]
@@ -43,7 +46,7 @@ const StudentUpdateProfile = () => {
         formData.append("aadharCard", aadharCard)
         formData.append("avatar", avatar)
         formData.append("email", store.student.student.student.email)
-        const response = await fetch('http://localhost:4000/api/student/updateProfile', {
+        const response = await fetch(`${url}/student/updateProfile`, {
             method: 'POST',
             body: formData,
             headers: {
