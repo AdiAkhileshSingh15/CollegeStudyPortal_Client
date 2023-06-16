@@ -14,7 +14,8 @@ const StudentDetails = () => {
     const [section, setSection] = useState("")
     const [result, setResult] = useState([])
     const [error, setError] = useState({})
-
+    
+    const url = "https://collegeapi.onrender.com"
 
     useEffect(() => {
         if (store.error) {
@@ -23,7 +24,7 @@ const StudentDetails = () => {
     }, [store.error])
 
     const filterStudentHelper = async () => {
-        const res = await fetch('http://localhost:4000/api/student/getAllStudents', {
+        const res = await fetch(`${url}/api/student/getAllStudents`, {
             method: 'POST',
             body: JSON.stringify({ department, year, section }),
             headers: {
@@ -44,7 +45,7 @@ const StudentDetails = () => {
 
     const filterByNameHelper = async () => {
 
-        const res = await fetch('http://localhost:4000/api/student/getStudentByName', {
+        const res = await fetch(`${url}/api/student/getStudentByName`, {
             method: 'POST',
             body: JSON.stringify({ name }),
             headers: {
