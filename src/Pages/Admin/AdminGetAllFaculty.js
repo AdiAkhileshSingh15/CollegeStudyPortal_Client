@@ -31,6 +31,7 @@ const AdminGetAllFaculty = () => {
         if (!response.ok) {
             setError(json)
             setIsLoading(false)
+            setDepartment('')
         }
         if (response.ok) {
             setError({})
