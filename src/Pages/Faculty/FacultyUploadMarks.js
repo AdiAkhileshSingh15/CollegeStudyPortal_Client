@@ -64,8 +64,10 @@ const FacultyUploadMarks = () => {
 
         if (!response.ok) {
             setError(json)
+            setYear('')
         }
         if (response.ok) {
+            setError({})
             setYear('')
             dispatch(fetchStudents(json.result))
             dispatch(getSubjectCodeList(json.subjectCode))
@@ -91,8 +93,15 @@ const FacultyUploadMarks = () => {
 
         if (!response.ok) {
             setErrorHelper(json)
+            setSubjectCode('')
+            setExam('')
+            setTotalMarks('')
+            setMarks('')
+            setDepartment('')
+            setSection('')
         }
         if (response.ok) {
+            setErrorHelper({})
             setSubjectCode('')
             setExam('')
             setTotalMarks('')
