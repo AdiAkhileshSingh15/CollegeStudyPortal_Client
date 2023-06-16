@@ -47,6 +47,8 @@ const LoginPage = () => {
         if (!response.ok) {
             setError(json)
             setIsLoading(false)
+            setRegistrationNumber('')
+            setPassword('')
         }
         if (response.ok) {
             //saving the admin token to local storage
