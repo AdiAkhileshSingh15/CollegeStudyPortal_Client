@@ -63,6 +63,17 @@ const AdminAddStudent = () => {
         if (!response.ok) {
             setError(json)
             setIsLoading(false)
+            setName('')
+            setEmail('')
+            setYear('')
+            setSection('')
+            setDepartment('')
+            setFatherName('')
+            setDob('')
+            setGender('')
+            setAadharCard('')
+            setContactNumber('')
+            setFatherContactNumber('')
         }
         if (response.ok) {
             setError({})
