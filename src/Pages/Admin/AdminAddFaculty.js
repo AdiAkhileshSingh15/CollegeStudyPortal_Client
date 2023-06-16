@@ -55,6 +55,14 @@ const AdminAddFaculty = () => {
         if (!response.ok) {
             setError(json)
             setIsLoading(false)
+            setName('')
+            setEmail('')
+            setDepartment('')
+            setDesignation('')
+            setFacultyMobileNumber('')
+            setDob('')
+            setGender('')
+            setAadharCard('')
         }
         if (response.ok) {
             setError({})
