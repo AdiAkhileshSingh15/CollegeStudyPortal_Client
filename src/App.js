@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import jwt_decode from 'jwt-decode'
 
 
-import AdminLogin from './Pages/Admin/AdminLogin'
+import LoginPage from './Pages/Admin/AdminLogin'
 
 import AdminAddStudent from './Pages/Admin/AdminAddStudent'
 
@@ -107,7 +107,7 @@ function App() {
       <BrowserRouter>
         <div className="pages">
           <Routes>
-            <Route path='/adminLogin' element={<AdminLogin />} />
+            <Route path='/adminLogin' element={<LoginPage />} />
             <Route path='/admin' element={<AdminHome />} />
             <Route path="/admin/addStudent" element={<AdminAddStudent />} />
             <Route path="/admin/addFaculty" element={<AdminAddFaculty />} />
