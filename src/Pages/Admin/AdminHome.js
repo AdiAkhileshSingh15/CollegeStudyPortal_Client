@@ -66,7 +66,7 @@ const AdminHome = () => {
                     </div>
                 </div>
                 <Footer />
-            </> : (navigate('/'))}
+            </> : (navigate('/adminLogin'))}
 
         </div>
     )
