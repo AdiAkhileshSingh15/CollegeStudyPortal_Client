@@ -33,6 +33,8 @@ const AdminGetAllStudent = () => {
         if (!response.ok) {
             setError(json)
             setIsLoading(false)
+            setDepartment('')
+            setYear('')
         }
         if (response.ok) {
             setError({})
