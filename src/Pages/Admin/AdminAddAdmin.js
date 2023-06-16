@@ -56,6 +56,11 @@ const AdminAddAdmin = () => {
         if (!response.ok) {
             dispatch(setErrors(json))
             setIsLoading(false)
+            setName('')
+            setEmail('')
+            setDepartment('')
+            setDob('')
+            setContactNumber('')
         }
         if (response.ok) {
             dispatch(setErrors({}))
