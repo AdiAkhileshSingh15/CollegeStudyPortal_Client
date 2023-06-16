@@ -5,7 +5,7 @@ import AdminHomeHelper from '../../Components/AdminHomeHelper'
 import classnames from 'classnames'
 import { getAllSubject } from '../../features/adminSlice'
 
-const AdminGetAllSubjects = () => {
+const AdminGetAllSubject = () => {
     const store = useSelector((store) => store)
     const dispatch = useDispatch()
     const [department, setDepartment] = useState('')
@@ -138,4 +138,4 @@ const AdminGetAllSubjects = () => {
     )
 }
 
-export default AdminGetAllSubjects
+export default AdminGetAllSubject
