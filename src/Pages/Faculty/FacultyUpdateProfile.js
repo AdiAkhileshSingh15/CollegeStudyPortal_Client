@@ -53,6 +53,10 @@ const FacultyUpdateProfile = () => {
         console.log(json)
         if (!response.ok) {
             dispatch(setErrors(json))
+            setGender('')
+            setAadharCard('')
+            setAvatar('')
+            setContactNumber('')
             setIsLoading(false)
         }
         if (response.ok) {
