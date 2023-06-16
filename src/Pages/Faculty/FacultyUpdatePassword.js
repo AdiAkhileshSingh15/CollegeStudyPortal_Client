@@ -42,6 +42,9 @@ const FacultyUpdatePassword = () => {
         if (!response.ok) {
             setError(json)
             setIsLoading(false)
+            setOldPassword('')
+            setNewPassword('')
+            setConfirmNewPassword('')
         }
         if (response.ok) {
             setError({})
